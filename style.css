@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(141deg, #dddddd 0%, #565656 51%, #343434 75%);
+}
+
+.character .toon-img {
+    width: 100px;
+    height: auto;
+    margin: 0 auto
+}
+
+.character .name {
+    text-align: center;
+}
+
+.character .hit-points {
+    text-align: center;
+}
