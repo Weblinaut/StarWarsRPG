@@ -1,9 +1,12 @@
 $(function() {
     game();
+
 });
 
 
 function game() {
+
+    new Audio("./assets/audio/starwars.mp3").play();
 
     var toons = characterData();
 
@@ -72,6 +75,7 @@ function game() {
 
             $('#opponent').html(setCharacterHTML(villan));
             $('#attackBtn').click(function () {
+                new Audio("./assets/audio/lightsaber.mp3").play();
                 var damage = villan.attack;
                 var strike = hero.attack;
                 hero.hp -= damage;

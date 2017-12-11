@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <title>Star Wars RPG</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
 <br><br>
 
-<header class="display-4 text-center">Star Wars: The Unlicensed RPG</header>
+<header class="display-4 text-center">Star Wars: The RPG</header>
 
 <div class="container">
     <h4 id="select-title">Choose Your Hero</h4>
@@ -21,12 +22,12 @@
 <h4>Your Hero</h4>
 <div id="mainToon"></div>
 
-<h4>The Enemies</h4>
+<h4 class="font">Enemies available for attack</h4>
 <div id="toonsLeft" class="row"></div>
 
 <br><br>
 <div class="attack-container">
-    <h4>Your Opponent</h4>
+    <h4>Defender</h4>
     <div id="opponent"></div>
     <button id="attackBtn">Attack!</button>
 </div>

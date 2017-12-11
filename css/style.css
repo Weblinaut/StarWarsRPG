@@ -1,9 +1,13 @@
 html, body {
     height: 100%;
+    font-family: 'Rubik Mono One', sans-serif;
 }
 
 body {
     background: linear-gradient(141deg, #dddddd 0%, #565656 51%, #343434 75%);
+}
+header {
+    color: gold;
 }
 
 .character .toon-img {
@@ -19,3 +23,4 @@ body {
 .character .hit-points {
     text-align: center;
 }
+
