@@ -108,6 +108,7 @@ function game() {
                     enemies = [];
                     toons = characterData();
                     setTimeout(function () {
+                        new Audio("./assets/audio/endgame.mp3").play();
                         $('#opponent').html('').show(); //hide for reset
                         toggleSelectArea();
                         $('#results').html('').fade();
