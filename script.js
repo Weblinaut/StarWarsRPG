@@ -86,14 +86,15 @@ function game() {
                 $('#mainToon').html(setCharacterHTML(hero));
 
                 if (villan.hp < 1) {
-                    $('#results').html('<h3>You have defeated ' + villan.name + '!</h3>').show();
+                    $('#results').html('<h3>You have defeated ' + villan.name.toLowerCase() + '!</h3>').show();
                     $('#opponent').slideUp();
                     villan = {};
                     $('#attackBtn').off("click");
                     $('#toonsLeft').show();
+                    $('#results').html('').fade();
                 }
                 if (hero.hp < 1) {
-                    $('#results').html('<h3>You have defeated by ' + villan.name + '!</h3>').show();
+                    $('#results').html('<h3>You have been defeated by ' + villan.name.toLowerCase() + '!</h3>').show();
                     //reset data
                     hero = {};
                     $('#mainToon').slideUp();
@@ -105,6 +106,7 @@ function game() {
                     setTimeout(function () {
                         $('#opponent').html('').show(); //hide for reset
                         toggleSelectArea();
+                        $('#results').html('').fade();
                         alert('You have lost...but the force is a circle...begin anew???')
                     }, 1500)
 
