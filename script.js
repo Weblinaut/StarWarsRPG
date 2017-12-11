@@ -106,13 +106,13 @@ function game() {
                     $('#toonsLeft').find('.character').off("click");
                     $('#toonsLeft').html('');
                     enemies = [];
+                    new Audio("./assets/audio/endgame.mp3").play();
                     toons = characterData();
                     setTimeout(function () {
-                        new Audio("./assets/audio/endgame.mp3").play();
+                        alert('You have lost...but the force is a circle...begin anew???');
                         $('#opponent').html('').show(); //hide for reset
                         toggleSelectArea();
                         $('#results').html('').fade();
-                        alert('You have lost...but the force is a circle...begin anew???')
                     }, 1500)
 
                 }
