@@ -20,6 +20,7 @@ function game() {
             "</div>";
     }
 
+
     function toggleSelectArea() {
         $('#toonSelect').slideToggle();
         $('#select-title').slideToggle();
@@ -36,6 +37,7 @@ function game() {
     var hero = {};
     var enemies = [];
     var villan = {};
+    console.log(toons);
 
 
     // pick a hero
@@ -81,9 +83,6 @@ function game() {
                 hero.hp -= damage;
                 villan.hp -= strike;
                 hero.attack += 10;
-                console.log(hero.hp);
-                console.log(hero.attack);
-
                 $('#results').html("<h3>You were hit for <span style='color: tomato;'>" + damage + "</span> points of damage You striked for <span style='color: tomato;'>" + strike + "</span> points of damage</h3>").show();
 
                 $('#opponent').html(setCharacterHTML(villan));
@@ -95,7 +94,8 @@ function game() {
                     villan = {};
                     $('#attackBtn').off("click");
                     $('#toonsLeft').show();
-                    $('#results').html('').fade();
+                    $('#results').html('').fadeOut();
+                    console.log(enemies);
                 }
                 if (hero.hp < 1) {
                     $('#results').html('<h3>You have been defeated by ' + villan.name.toLowerCase() + '!</h3>').show();
@@ -109,6 +109,7 @@ function game() {
                     new Audio("./assets/audio/endgame.mp3").play();
                     toons = characterData();
                     setTimeout(function () {
+
                         alert('You have lost...but the force is a circle...begin anew???');
                         $('#opponent').html('').show(); //hide for reset
                         toggleSelectArea();
@@ -116,6 +117,7 @@ function game() {
                     }, 1500)
 
                 }
+
             });
 
         });

@@ -9,7 +9,9 @@ body {
 header {
     color: gold;
 }
+#toonsLeft {
 
+}
 .character .toon-img {
     width: 100px;
     height: auto;
