@@ -95,7 +95,7 @@ function game() {
                     $('#attackBtn').off("click");
                     $('#toonsLeft').show();
                     $('#results').html('').fadeOut();
-                    console.log(enemies);
+
                 }
                 if (hero.hp < 1) {
                     $('#results').html('<h3>You have been defeated by ' + villan.name.toLowerCase() + '!</h3>').show();
@@ -115,7 +115,12 @@ function game() {
                         toggleSelectArea();
                         $('#results').html('').fade();
                     }, 1500)
+                $.each(toons, function (index, enemy) {
+                    if ((toons.hp <= 0) && (toons.name = "emperor")) {
+                        alert("try again asshole");
 
+                    }
+                })
                 }
 
             });
